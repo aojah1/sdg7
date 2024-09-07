@@ -82,11 +82,23 @@ The provision of adequate and reliable energy services at an affordable cost, in
 
 ## 1.2. Data Preparation
 
-Visualize key indicators related to sustainable energy, such as electricity access, renewable energy consumption, carbon emissions, and energy intensity.
+**Step1: Visualize key indicators related to sustainable energy, such as electricity access, renewable energy consumption, carbon emissions, and energy intensity.**
+
+Here we will Filter data for 10 selected countries to minimize higher computational requirement
+'United States', 'China', 'India', 'Afghanistan', 'Australia', 'Bangladesh', 'Saudi Arabia' 'Mozambique', 'Spain', 'Zimbabwe'
 
 ![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
 ![caption](images/Co2_Emission_PerPerson_MetricTon_Over_Time.jpg)
 ![caption](images/Electricity_Access_Percent_Over_Time.jpg)
-![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
+![caption](images/Renewable_Electricity_PerPerson_Over_Time.jpg)
+
+**Step 2: Analyze Vital Aspects : We will focus on specific areas such as electricity access, renewable energy, carbon emissions, energy intensity, financial flows, and economic growth.**
+
+**Step 3 Compare Nations and Track Progress : We will compare different countries and track their progress towards Sustainable Development Goal 7.**
+
+![caption](images/Electricity_Access_Progress_Towards_SDG7.jpg)
+
+**Step 4: Insights into Global Energy Consumption Patterns : We will identify trends and patterns in global energy consumption over time.**
+
 
 ### Objective
