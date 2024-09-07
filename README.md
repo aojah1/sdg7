@@ -85,6 +85,8 @@ The provision of adequate and reliable energy services at an affordable cost, in
 Visualize key indicators related to sustainable energy, such as electricity access, renewable energy consumption, carbon emissions, and energy intensity.
 
 ![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
-
+![caption](images/Co2_Emission_PerPerson_MetricTon_Over_Time.jpg)
+![caption](images/Electricity_Access_Percent_Over_Time.jpg)
+![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
 
 ### Objective
