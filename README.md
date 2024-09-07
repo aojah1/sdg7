@@ -106,4 +106,31 @@ We will identify trends and patterns in global energy consumption over time.
 
 ![caption](images/Global_Energy_Consumption_Over_Time.jpg)
 
-### Objective
+# Objective 2 :: How are the nations going to perform in the future against their SDG7 goals
+
+Built a time series model to track progress in electricity access, clean fuel access, renewable electricity per person, and CO2 emissions per person over the next four years
+
+### Step 2: Data Processing 
+Features to be uses to built a Time Series Model
+
+Year','Country', 'Electricity_Access_Percent', 'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Co2_Emission_PerPerson_MetricTon'
+
+Handle missing values using KNN Imputation
+
+knn_imputer = KNNImputer(n_neighbors=5)
+
+After imputation, there are no missing values:
+
+Year                                0
+Country                             0
+Electricity_Access_Percent          0
+CleanFuel_Access_Percent            0
+Renewable_Electricity_PerPerson     0
+Co2_Emission_PerPerson_MetricTon    0
+
+### Step 2: Extract Relevant Features
+Select the required features and ensure they are in the correct format.
+
+
+
+![caption](images/scaled_data.jpg)
