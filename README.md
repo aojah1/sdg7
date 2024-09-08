@@ -185,8 +185,11 @@ Predict future values for the next four years.
 Assess the performance of the model on the historical data .
 
 Mean Squared Error for Electricity_Access_Percent: 6741.524914023628
+
 Mean Squared Error for CleanFuel_Access_Percent: 4351.7954241105135
+
 Mean Squared Error for Renewable_Electricity_PerPerson: 18002.506731978734
+
 Mean Squared Error for Co2_Emission_PerPerson_MetricTon: 24812432016.179806
 
 ### Step 9: Visualize the Results
@@ -197,3 +200,24 @@ Plot the historical and forecasted values to visualize the progress
 ![caption](images/Co2_Emission_PerPerson_MetricTon_forecast.jpg)
 ![caption](images/Electricity_Access_Percent_forecast.jpg)
 ![caption](images/Renewable_Electricity_PerPerson_forecast.jpg)
+
+# Objective 3:: Find whether a country's renewable energy consumption is above or below the median.
+
+### Step 1: Feature Selection
+
+Select the relevant features
+    'Year', 'Country', 'Renewable_Energy_Consumption_AgainstTotalEnergy_Percent'
+    
+### Step 2: Label Creation
+
+Create a binary target variable indicating progress towards sustainability goals. For simplicity, let's define a country as making progress if its renewable energy consumption exceeds a certain threshold (e.g., 30%).
+
+### Step 3: Train-Test Split
+
+Split the data into training and testing sets.
+
+### Step 4: Optimize the Classification Model
+
+Use GridSearchCV to find the best hyperparameters for each model.
+
+![caption](GridSearch_Classification.jpeg)
