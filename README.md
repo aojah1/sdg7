@@ -140,7 +140,7 @@ Visualize the data to check scaled dimensions
 
 SDG7 over time can be visualized here 
 
-![caption](images/sdg.jpg)
+![caption](images/sdg7.jpg)
 
 ###  Step 3: Prepare the data for time series analysis
 
