@@ -264,7 +264,7 @@ Interpret the results to demonstrate the sustainability use case.
 ***Results:***
 Here are the top 10 countires where Renewable Ebergy Consumption per person consumption has exceeded 30% 
 
-![caption](images/Renewable_Electricity_PerPerson.jpg)
+![caption](images/Renewable_Electricity_PerPerson_Threshold.jpg)
 
 
 
