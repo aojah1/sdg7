@@ -221,3 +221,23 @@ Split the data into training and testing sets.
 Use GridSearchCV to find the best hyperparameters for each model.
 
 ![caption](images/GridSearch_Classification.jpg)
+
+Compare the performance of the different models :
+
+KNN Best Params: {'knn__n_neighbors': 3, 'knn__weights': 'distance'}, Best Score: 0.9826240526730908
+
+Logistic Regression Best Params: {'logreg__C': 100, 'logreg__penalty': 'l1', 'logreg__solver': 'liblinear'}, Best Score: 0.9991735537190083
+
+SVC Best Params: {'svc__C': 100, 'svc__gamma': 'scale', 'svc__kernel': 'linear'}, Best Score: 0.9975206611570249
+
+Assess the performance of the models on the test set :
+
+![caption](images/classification_performance.jpg)
+
+Plot the confusion matrix and other relevant evaluation metrics to visualize the results.
+
+![caption](images/confusion_matrix.jpg)
+
+***Conclusion:
+The best model from the above analysis is SVM as it has the highest test score and also the lowest fit time, so we will continue to use the SVM model for Classification needs for the Sustainability dataset.
+
