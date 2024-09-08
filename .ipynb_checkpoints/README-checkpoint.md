@@ -239,5 +239,32 @@ Plot the confusion matrix and other relevant evaluation metrics to visualize the
 ![caption](images/confusion_matrix.jpg)
 
 ***Conclusion:
-The best model from the above analysis is SVM as it has the highest test score and also the lowest fit time, so we will continue to use the SVM model for Classification needs for the Sustainability dataset.
+The best model from the above analysis is SVM as it has the highest test score and also the lowest fit time, so we will continue to use the SVM model for Classification needs for the Sustainability dataset.***
+
+### Step 5: Build and Train the SVM Model
+
+Train the SVM model using the training data. Also use the best param based on the GridSearch :
+
+SVC Best Params: {'svc__C': 100, 'svc__gamma': 'scale', 'svc__kernel': 'linear'}, Best Score: 0.9975206611570249
+
+Pipeline(steps=[('scaler', StandardScaler()),
+                ('svm', SVC(C=100, kernel='linear'))])
+               
+               
+### Step 6: Evaluate the Model
+Assess the performance of the model on the test set.
+
+Plot confusion matrix
+
+![caption](images/confusion_matrix_svc.jpg)
+
+### Step 7: Insights Extraction
+Interpret the results to demonstrate the sustainability use case.
+
+***Results:***
+Here are the top 10 countires where Renewable Ebergy Consumption per person consumption has exceeded 30% 
+
+![caption](images/Renewable_Electricity_PerPerson.jpg)
+
+
 
