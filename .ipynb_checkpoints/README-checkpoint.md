@@ -220,4 +220,4 @@ Split the data into training and testing sets.
 
 Use GridSearchCV to find the best hyperparameters for each model.
 
-![caption](GridSearch_Classification.jpeg)
+![caption](GridSearch_Classification.jpg)
