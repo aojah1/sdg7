@@ -108,10 +108,10 @@ We will identify trends and patterns in global energy consumption over time.
 
 # Objective 2 :: How are the nations going to perform in the future against their SDG7 goals
 
-Built a time series model to track progress in electricity access, clean fuel access, renewable electricity per person, and CO2 emissions per person over the next four years
+Build a time series model to track progress in electricity access, clean fuel access, renewable electricity per person, and CO2 emissions per person over the next four years
 
-### Step 2: Data Processing 
-Features to be uses to built a Time Series Model
+### Step 1: Data Processing 
+Features to be uses to buildt a Time Series Model
 
 Year','Country', 'Electricity_Access_Percent', 'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Co2_Emission_PerPerson_MetricTon'
 
@@ -262,18 +262,100 @@ Plot confusion matrix
 Interpret the results to demonstrate the sustainability use case.
 
 ***Results:***
-Here are the top 5 countires where **Renewable Energy Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieveb their goal.
+Here are the top 5 countires where **Renewable Energy Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieve their goal.
 
 ![caption](images/Renewable_Electricity_PerPerson_Threshold.jpg)
 
 
-Here are the top 5 countires where **Electricity Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieveb their goal.
+Here are the top 5 countires where **Electricity Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieve their goal.
 
 ![caption](images/Predicted_Progress_Electricity.jpg)
 
-Here are the top 5 countires where **Clean Fuel Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieveb their goal.
+Here are the top 5 countires where **Clean Fuel Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieve their goal.
 
 ![caption](images/Predicted_Progress_CleanFuel.jpg)
+
+# Objectives 4 : : Build a regression model to predict CO2 emissions for all the countries
+
+### Step 1: Data Processing 
+
+Features to be uses to build a Regression Model:
+
+Build a regression model to predict CO2 emissions based on relevant features such as 
+
+'Electricity_Access_Percent', 'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Financial_Aids_Dollars', 'Renewable_Energy_Consumption_AgainstTotalEnergy_Percent', 'LowCarbon_Electricity_Percent', 'Primary_Energy_Consumption_PerPerson_kWh', 'Annual_GDP_Growth_Percent', 'GDP_PerPerson_Dollars'
+
+Apply KNN Imputer to handle missing data
+
+Visualize the distributuon of data for the features been selected
+
+![caption](images/co2_regression_data_dist.jpg)
+
+### Step 2: Train-Test Split
+
+By scaling the data and rerunning the regression models (Linear Regression, Ridge, and Lasso), we ensure that the features are comparable in magnitude, which improves the model's performance. 
+
+
+Split the data into training and testing sets.
+
+### Step 3: Build Models: Linear Regression, Ridge, and Lasso
+
+#Apply GridSearchCV with Cross Validation = 5, to find the best Ridge and Lasso parameters
+
+Best Ridge alpha: {'alpha': 100}
+
+Best Lasso alpha: {'alpha': 100}
+
+#Initialize the models with the best params
+
+lr = LinearRegression()
+
+ridge = Ridge(alpha=1.0)
+
+lasso = Lasso(alpha=0.1)
+
+#Calculate the mean and root mean squared error for each model:
+
+Linear Regression - MSE: 284146054678.51086
+
+Ridge Regression - MSE: 282701282002.0081
+
+Lasso Regression - MSE: 284081928229.51855
+
+### Step 4: Model Evaluation
+
+Compare the performance of the three models (Linear Regression, Ridge, and Lasso) based on the Mean Squared Error (MSE). The model with the lowest MSE is considered the best-performing model. 
+
+![caption](images/best_regression_model.jpg)
+
+Based on the above evaluation, ***Ridge Regression*** is the best model.
+
+### Step 5: Predict CO2 Emissions Using the Best-Performing Model
+
+Select the Ridge Regression as the best-performing model based on the evaluation metrics (MSE) and use it to predict CO2 emissions.
+
+### Step 6: Visualize the Results
+
+![caption](images/Predicted_CO2_Emissions_by_Country.jpg)
+
+**Conclusion:**
+Based on the results, India is predicted to be the highest CO2 propducer followed by China and Bandgladesh. Factors impacting the high CO2 production are - 
+
+a. Lower Electricity Access per person
+
+b. Lower Clean Fuel Access per person
+
+c. Lower Renewable Electricity access per person
+
+d. Lower Financial aids from developed countries such as USA
+
+e. Lower Percentage of electricity been produced from low-carbon sources (nuclear and renewables).
+
+f. High Energy Consumption per person
+
+g. Slow GDP Growth as compared to other countries
+
+h. Low GDP per person
 
 
 
