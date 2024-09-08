@@ -262,9 +262,14 @@ Plot confusion matrix
 Interpret the results to demonstrate the sustainability use case.
 
 ***Results:***
-Here are the top 10 countires where Renewable Ebergy Consumption per person consumption has exceeded 30% 
+Here are the top 5 countires where **Renewable Energy Consumption per personz**  has exceeded 30%. Also the below 5 coubtries failed to achieveb their goal.
 
 ![caption](images/Renewable_Electricity_PerPerson_Threshold.jpg)
+
+
+Here are the top 5 countires where **Electricity Consumption per personz**  has exceeded 30%. Also the below 5 coubtries failed to achieveb their goal.
+
+![caption](images/Predicted_Progress_Electricity.jpg)
 
 
 
