@@ -86,7 +86,7 @@ The provision of adequate and reliable energy services at an affordable cost, in
 Visualize key indicators related to sustainable energy, such as electricity access, renewable energy consumption, carbon emissions, and energy intensity.**
 
 Here we will Filter data for 10 selected countries to minimize higher computational requirement
-'United States', 'China', 'India', 'Afghanistan', 'Australia', 'Bangladesh', 'Saudi Arabia' 'Mozambique', 'Spain', 'Zimbabwe'
+ >'United States', 'China', 'India', 'Afghanistan', 'Australia', 'Bangladesh', 'Saudi Arabia' 'Mozambique', 'Spain', 'Zimbabwe'
 
 ![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
 ![caption](images/Co2_Emission_PerPerson_MetricTon_Over_Time.jpg)
@@ -106,4 +106,94 @@ We will identify trends and patterns in global energy consumption over time.
 
 ![caption](images/Global_Energy_Consumption_Over_Time.jpg)
 
-### Objective
+# Objective 2 :: How are the nations going to perform in the future against their SDG7 goals
+
+Built a time series model to track progress in electricity access, clean fuel access, renewable electricity per person, and CO2 emissions per person over the next four years
+
+### Step 2: Data Processing 
+Features to be uses to built a Time Series Model
+
+Year','Country', 'Electricity_Access_Percent', 'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Co2_Emission_PerPerson_MetricTon'
+
+Handle missing values using KNN Imputation
+
+knn_imputer = KNNImputer(n_neighbors=5)
+
+After imputation, there are no missing values:
+
+Year                                0
+Country                             0
+Electricity_Access_Percent          0
+CleanFuel_Access_Percent            0
+Renewable_Electricity_PerPerson     0
+Co2_Emission_PerPerson_MetricTon    0
+
+### Step 2: Extract Relevant Features
+Select the required features and ensure they are in the correct format.
+
+Since the features are in different units, we will use StandardScaler to scale them.
+
+scaler = StandardScaler()
+
+Visualize the data to check scaled dimensions
+![caption](images/scaled_data.jpg)
+
+SDG7 over time can be visualized here 
+
+![caption](images/sdg.jpg)
+
+###  Step 3: Prepare the data for time series analysis
+
+Ensure the 'Year' column is in datetime format
+Set 'Year' as the index
+Select the relevant features
+
+### Step 4: Resample the Data
+
+Resample the data to annual frequency if needed
+
+### Step 5: Train-Test Split
+
+Define the split point (e.g., last 4 years for testing)
+
+split_date = '2016-12-31'
+
+### Step 5: Build a Pipeline
+
+Create a pipeline with StandardScaler and ARIMA. Note that ARIMA models work on univariate time series, so we need to build separate models for each feature.
+
+{'Electricity_Access_Percent': Pipeline(steps=[('scaler', StandardScaler()),
+                ('arima',
+                 <statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x7fb011a2f760>)]), 'CleanFuel_Access_Percent': Pipeline(steps=[('scaler', StandardScaler()),
+                ('arima',
+                 <statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x7fb011fec280>)]), 'Renewable_Electricity_PerPerson': Pipeline(steps=[('scaler', StandardScaler()),
+                ('arima',
+                 <statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x7fb011e3ed90>)]), 'Co2_Emission_PerPerson_MetricTon': Pipeline(steps=[('scaler', StandardScaler()),
+                ('arima',
+                 <statsmodels.tsa.arima.model.ARIMAResultsWrapper object at 0x7fb011fef370>)])}
+                 
+### Step 6: Train the Model
+
+Fit the model on the training data.
+
+### Step 7: Forecast Future Values
+
+Predict future values for the next four years.
+
+### Step 8: Evaluate the Model
+
+Assess the performance of the model on the historical data .
+
+Mean Squared Error for Electricity_Access_Percent: 6741.524914023628
+Mean Squared Error for CleanFuel_Access_Percent: 4351.7954241105135
+Mean Squared Error for Renewable_Electricity_PerPerson: 18002.506731978734
+Mean Squared Error for Co2_Emission_PerPerson_MetricTon: 24812432016.179806
+
+### Step 9: Visualize the Results
+
+Plot the historical and forecasted values to visualize the progress
+
+![caption](images/CleanFuel_Access_Percent_forecast.jpg)
+![caption](images/Co2_Emission_PerPerson_MetricTon_forecast.jpg)
+![caption](images/Electricity_Access_Percent_forecast.jpg)
+![caption](images/Renewable_Electricity_PerPerson_forecast.jpg)
