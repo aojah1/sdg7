@@ -235,7 +235,7 @@ Split the data into training and testing sets.
 
 Use GridSearchCV to find the best hyperparameters for each model.
 
-![caption](images/GridSearch_Classification.jpg)
+<img src="images/GridSearch_Classification.jpg" alt="GridSearch_Classification" style="width:400px;"/>
 
 Compare the performance of the different models :
 
@@ -247,7 +247,7 @@ SVC Best Params: {'svc__C': 100, 'svc__gamma': 'scale', 'svc__kernel': 'linear'}
 
 Assess the performance of the models on the test set :
 
-![caption](images/classification_performance.jpg)
+<img src="images/classification_performance.jpg" alt="classification_performance" style="width:400px;"/>
 
 Plot the confusion matrix and other relevant evaluation metrics to visualize the results.
 
@@ -279,16 +279,15 @@ Interpret the results to demonstrate the sustainability use case.
 ***Results:***
 Here are the top 5 countires where **Renewable Energy Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieve their goal.
 
-![caption](images/Renewable_Electricity_PerPerson_Threshold.jpg)
-
+<img src="images/Renewable_Electricity_PerPerson_Threshold.jpg" alt="Renewable_Electricity_PerPerson_Threshold" style="width:400px;"/>
 
 Here are the top 5 countires where **Electricity Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieve their goal.
 
-![caption](images/Predicted_Progress_Electricity.jpg)
+<img src="images/Predicted_Progress_Electricity.jpg" alt="Predicted_Progress_Electricity" style="width:400px;"/>
 
 Here are the top 5 countires where **Clean Fuel Consumption per person**  has exceeded 30%. Also the below 5 countries failed to achieve their goal.
 
-![caption](images/Predicted_Progress_CleanFuel.jpg)
+<img src="images/Predicted_Progress_CleanFuel.jpg" alt="Predicted_Progress_CleanFuel" style="width:400px;"/>
 
 ## Objectives 4 : : Build a regression model to predict CO2 emissions for all the countries
 
@@ -341,7 +340,7 @@ Lasso Regression - MSE: 284081928229.51855
 
 Compare the performance of the three models (Linear Regression, Ridge, and Lasso) based on the Mean Squared Error (MSE). The model with the lowest MSE is considered the best-performing model. 
 
-<img src="images/best_regression_model.jpg" alt="best_regression_model" style="width:200px;"/>
+<img src="images/best_regression_model.jpg" alt="best_regression_model" style="width:400px;"/>
 
 
 Based on the above evaluation, ***Ridge Regression*** is the best model.
