@@ -290,7 +290,7 @@ Here are the top 5 countires where **Clean Fuel Consumption per person**  has ex
 
 ![caption](images/Predicted_Progress_CleanFuel.jpg)
 
-# Objectives 4 : : Build a regression model to predict CO2 emissions for all the countries
+## Objectives 4 : : Build a regression model to predict CO2 emissions for all the countries
 
 ### Step 1: Data Processing 
 
@@ -341,7 +341,8 @@ Lasso Regression - MSE: 284081928229.51855
 
 Compare the performance of the three models (Linear Regression, Ridge, and Lasso) based on the Mean Squared Error (MSE). The model with the lowest MSE is considered the best-performing model. 
 
-![caption](images/best_regression_model.jpg)
+<img src="images/best_regression_model.jpg" alt="best_regression_model" style="width:200px;"/>
+
 
 Based on the above evaluation, ***Ridge Regression*** is the best model.
 
