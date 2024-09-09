@@ -87,6 +87,8 @@ Visualize key indicators related to sustainable energy, such as electricity acce
 
 Here we will Filter data for 10 selected countries to minimize higher computational requirement
  >'United States', 'China', 'India', 'Afghanistan', 'Australia', 'Bangladesh', 'Saudi Arabia' 'Mozambique', 'Spain', 'Zimbabwe'
+ 
+ ***Compare Nations and Track Progress***
 
 ![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
 ![caption](images/Co2_Emission_PerPerson_MetricTon_Over_Time.jpg)
@@ -100,7 +102,7 @@ We will focus on specific areas such as electricity access, renewable energy, ca
 
 > At an average, 113.14% of people world wide use Renewable energy for Electicity. This higher percentage of consumption is because the data is skued by first world country against developing countries.
 
-> At an average, 1.598665e+05 Metric TOn of CO2 is emitted  per person world wide.
+> At an average, 1.598665e+05 Metric Ton of CO2 is emitted  per person world wide.
 
 > At an average, 36.80% of people world wide uses electricity from low-carbon sources such as nuclear and renewables.
 
@@ -109,7 +111,7 @@ We will focus on specific areas such as electricity access, renewable energy, ca
 > At an average, $13,283.77 is the GDP per person world wide
 
 
-**Step 3: Compare Nations and Track Progress :**
+**Step 3: Worldwide progress towards Sustainable Development Goal 7 :**
 We will compare different countries and track their progress towards Sustainable Development Goal 7.
 
 ![caption](images/Electricity_Access_Progress_Towards_SDG7.jpg)
@@ -124,9 +126,9 @@ We will identify trends and patterns in global energy consumption over time.
 Build a time series model to track progress in electricity access, clean fuel access, renewable electricity per person, and CO2 emissions per person over the next four years
 
 ### Step 1: Data Processing 
-Features to be uses to buildt a Time Series Model
+Features to be uses to buildt a Time Series Model :
 
-Year','Country', 'Electricity_Access_Percent', 'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Co2_Emission_PerPerson_MetricTon'
+> Year','Country', 'Electricity_Access_Percent', 'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Co2_Emission_PerPerson_MetricTon'
 
 Handle missing values using KNN Imputation
 
@@ -163,13 +165,13 @@ Select the relevant features
 
 ### Step 4: Resample the Data
 
-Resample the data to annual frequency if needed
+Resample the data to annual frequency
 
 ### Step 5: Train-Test Split
 
 Define the split point (e.g., last 4 years for testing)
 
-split_date = '2016-12-31'
+> split_date = '2016-12-31'
 
 ### Step 5: Build a Pipeline
 
