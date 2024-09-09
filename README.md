@@ -19,7 +19,7 @@ I will use this dataset showcasing sustainable energy indicators and other usefu
 
 ### Success Criteria:
 
-The Machine Learning alogrithm proposed will enable goverment of all countires to track progress towards Sustainable Development Goal 7, and gain profound insights into global energy consumption patterns over time.
+The Machine Learning alogrithm proposed will enable goverment and related agencies of all countires to track progress towards Sustainable Development Goal 7, and gain profound insights into global energy consumption patterns over time.
 
 ## 2. Data Understanding
 
@@ -68,22 +68,22 @@ Familiarize with the dataset, understand the features, and assess the target var
 
 **Annual_GDP_Growth_Percent** : Annual GDP growth rate based on constant local currency.
 
-**GDP_PerPerson_Dollars** : Gross domestic product per person.
+**GDP_PerPerson_Dollars** : Gross domestic product per person in dollars.
 
 
-# Objectives 1 : : Showcase Sustainable Energy Indicators
+## Objectives 1 : : Showcase Sustainable Energy Indicators
 
 The provision of adequate and reliable energy services at an affordable cost, in a secure and environmentally benign manner and in conformity with social and economic development needs, is an essential element of sustainable development.
 
 ### 1.1 Features Exploration
 
-**Features to be used** :
-'Year', 'Country', 'Electricity_Access_Percent',  'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Co2_Emission_PerPerson_MetricTon'
+Features to be used :
+>>'Year', 'Country', 'Electricity_Access_Percent',  'CleanFuel_Access_Percent', 'Renewable_Electricity_PerPerson', 'Co2_Emission_PerPerson_MetricTon'
 
 ## 1.2. Data Preparation
 
-**Step1: key indicators :**
-Visualize key indicators related to sustainable energy, such as electricity access, renewable energy consumption, carbon emissions, and energy intensity.**
+**Step 1: key indicators :**
+Visualize key indicators related to sustainable energy, such as electricity access, renewable energy consumption, carbon emissions, and energy intensity.
 
 Here we will Filter data for 10 selected countries to minimize higher computational requirement
  >'United States', 'China', 'India', 'Afghanistan', 'Australia', 'Bangladesh', 'Saudi Arabia' 'Mozambique', 'Spain', 'Zimbabwe'
@@ -96,7 +96,20 @@ Here we will Filter data for 10 selected countries to minimize higher computatio
 **Step 2: Analyze Vital Aspects :** 
 We will focus on specific areas such as electricity access, renewable energy, carbon emissions, energy intensity, financial flows, and economic growth.
 
-**Step 3 Compare Nations and Track Progress :**
+> At an average, 78.93% of people world wide has Early Access to Electicity
+
+> At an average, 113.14% of people world wide use Renewable energy for Electicity. This higher percentage of consumption is because the data is skued by first world country against developing countries.
+
+> At an average, 1.598665e+05 Metric TOn of CO2 is emitted  per person world wide.
+
+> At an average, 36.80% of people world wide uses electricity from low-carbon sources such as nuclear and renewables.
+
+> At an average, annual GDP growth for a country is 3.44%
+
+> At an average, $13,283.77 is the GDP per person world wide
+
+
+**Step 3: Compare Nations and Track Progress :**
 We will compare different countries and track their progress towards Sustainable Development Goal 7.
 
 ![caption](images/Electricity_Access_Progress_Towards_SDG7.jpg)
