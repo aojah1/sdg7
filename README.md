@@ -90,10 +90,22 @@ Here we will Filter data for 10 selected countries to minimize higher computatio
  
  ***Compare Nations and Track Progress***
 
-![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
-![caption](images/Co2_Emission_PerPerson_MetricTon_Over_Time.jpg)
 ![caption](images/Electricity_Access_Percent_Over_Time.jpg)
-![caption](images/Renewable_Electricity_PerPerson_Over_Time.jpg)
+
+> By 2020, countries such as United States and China provides 100% Electricity access to all its population, where as in country such as Bangladesh, still 10% of the population doesn't has access to Electricity.
+
+![caption](images/CleanFuel_Access_Percent_Over_Time.jpg)
+
+> By 2020, countries such as United States provides 100% Clean Energy access to all its population, where as in country such as Bangladesh, only 20% of the population has access to Clean Energy.
+
+![caption](images/Renewable_Energy_Consumption_AgainstTotalEnergy_Percent_Over_Time.jpg)
+
+> By 2020, the Renewable Energy Consumption against Totoal Energy per person is still very low. Spain is at 18% and Saudi Arabia is at 0% (which is a shame).
+
+![caption](images/Co2_Emission_PerPerson_MetricTon_Over_Time.jpg)
+
+> By 2020, China has the highest CO2 emission worldwide, whereas Spain has the lowest.
+
 
 **Step 2: Analyze Vital Aspects :** 
 We will focus on specific areas such as electricity access, renewable energy, carbon emissions, energy intensity, financial flows, and economic growth.
@@ -116,10 +128,14 @@ We will compare different countries and track their progress towards Sustainable
 
 ![caption](images/Electricity_Access_Progress_Towards_SDG7.jpg)
 
+> In the last 20 years (from 2000-2020), Electricity accesd to people across the world has increased by 10%. There is still 17% of the world population who doesn't have access to electricity
+
 **Step 4: Insights into Global Energy Consumption Patterns :**
 We will identify trends and patterns in global energy consumption over time.
 
 ![caption](images/Global_Energy_Consumption_Over_Time.jpg)
+
+> In the last 20 years (from 2000-2020), Energy Consumption per person across the world has remained the same, which is around 24,000 KWh.
 
 # Objective 2 :: How are the nations going to perform in the future against their SDG7 goals
 
@@ -174,6 +190,10 @@ Define the split point (e.g., last 4 years for testing)
 > split_date = '2016-12-31'
 
 ### Step 5: Build a Pipeline
+
+We will first perform a grid search to find the best parameters :
+
+Best ARIMA parameters: (0, 2, 1)
 
 Create a pipeline with StandardScaler and ARIMA. Note that ARIMA models work on univariate time series, so we need to build separate models for each feature.
 
