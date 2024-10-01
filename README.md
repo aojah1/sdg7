@@ -376,21 +376,14 @@ Select the Ridge Regression as the best-performing model based on the evaluation
 **Conclusion:**
 Based on the results, India is predicted to be the highest CO2 propducer followed by China and Bandgladesh. Factors impacting the high CO2 production are - 
 
-a. Lower Electricity Access per person
+1. Lower Clean Fuel Access per person
 
-b. Lower Clean Fuel Access per person
+2. Lower Percentage of electricity been produced from low-carbon sources (nuclear and renewables).
 
-c. Lower Renewable Electricity access per person
+3. Lower Renewable Electricity access per person
 
-d. Lower Financial aids from developed countries such as USA
+4. Lower Financial aids from developed countries such as USA
 
-e. Lower Percentage of electricity been produced from low-carbon sources (nuclear and renewables).
+I used the coefficient of the ridge model to derive at the feature importance:
 
-f. High Energy Consumption per person
-
-g. Slow GDP Growth as compared to other countries
-
-h. Low GDP per person
-
-
-
+![caption](images/ridge-fi.png)
